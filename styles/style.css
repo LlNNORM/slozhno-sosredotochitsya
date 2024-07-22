@@ -1,5 +1,47 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375px;
+  font-family:var(--main-font, sans-serif);
+  background: var(--bg-color, #000028);
+  padding: 10px;
+}
+.header {
+  background: url(../images/cover-image-dark.png) center center / cover no-repeat;
+}
+.header__title {
+  font-size: clamp(7.25rem, 10.8974rem + -15.5624vw, 0.9375rem);
+  font-weight: 700;
+  line-height: 83%;
+  color:var(--accent-color,#DB00FF)
+}
+
+.header__description {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--bg-color, #000028);
+  background:var(--main-accent-color, #FF0070);
+}
+
+.importance {
+}
+.heading {
+  color: var(--main-accent-color, #FF0070);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+}
+.subheading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--bg-color, #000028);
+  background:var(--main-accent-color, #FF0070);
+}
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--text-color, #F1B2CE);
 }
