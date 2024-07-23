@@ -4,8 +4,9 @@
 */
 :root {
   --main-font:'IBM Plex mono';
-  --main-accent-color:#FF0070;
-  --accent-color:#DB00FF;
+  --accent-color:#FF0070;
+  --header-footer-text-color:#DB00FF;
   --text-color:#F1B2CE;
   --bg-color:#000028;
+  --header-footer-padding-variation: clamp(10px, 0.0286rem + 2.5445vi, 20px);
 }
