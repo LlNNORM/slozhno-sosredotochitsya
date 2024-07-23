@@ -4,17 +4,18 @@
   display: grid;
   font-family:var(--main-font, sans-serif);
   background: var(--bg-color, #000028);
-  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem) 0;
   gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
 }
-.header {
-  position: relative;
-  background: url(../images/cover-image-dark.png) center center / cover no-repeat;
+.header, .footer {
   min-block-size: 668px;
-  background-size: calc(100% + 2 * clamp(10px, 1.3073rem + 5.0891vi, 20px));
-  /* inline-size: calc(100% + 2 * clamp(10px, 1.3073rem + 5.0891vi, 20px));
-  inset-inline-end: clamp(10px, 1.3073rem + 5.0891vi, 20px); */
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem) 0;
 }
+
+.header {
+  background: url(../images/cover-image-dark.png) center center / cover no-repeat;
+
+}
+
 .header__title {
   font-size: clamp(7.25rem, 10.8974rem + -15.5624vw, 0.9375rem);
   font-weight: 700;
@@ -33,6 +34,7 @@
 .content {
   display: grid;
   gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem) 0;
 }
 
 .difficulties {
