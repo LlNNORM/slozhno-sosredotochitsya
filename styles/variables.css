@@ -8,5 +8,5 @@
   --header-footer-text-color:#DB00FF;
   --text-color:#F1B2CE;
   --bg-color:#000028;
-  --header-footer-padding-variation: clamp(10px, 0.0286rem + 2.5445vi, 20px);
+  --padding-variation: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
 }

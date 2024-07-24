@@ -4,11 +4,12 @@
   display: grid;
   font-family:var(--main-font, sans-serif);
   background: var(--bg-color, #000028);
-  gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  gap: clamp(2.5rem, 1.3073rem + 5.0891vi, 3.75rem);
+  font-size: 18px;
 }
 .header, .footer {
   min-block-size: 668px;
-  padding: var(--header-footer-padding-variation, clamp(10px, 0.0286rem + 2.5445vi, 20px));
+  padding: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
 }
 
 .header {
@@ -27,8 +28,8 @@ display: flex;
   &::after{
     content:"";
     position: absolute;
-    inset-inline-start: var(--header-footer-padding-variation, clamp(10px, 0.0286rem + 2.5445vi, 20px));
-    inset-block-end: var(--header-footer-padding-variation, clamp(10px, 0.0286rem + 2.5445vi, 20px));
+    inset-inline-start: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
+    inset-block-end: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem));
     inline-size: 25px;
     block-size: 25px;
     border-block-end:1px solid var(--accent-color, #FF0070);
@@ -36,8 +37,8 @@ display: flex;
   };
   &::before{
     content:"";
-    inset-inline-end: var(--header-footer-padding-variation, clamp(10px, 0.0286rem + 2.5445vi, 20px));
-    inset-block-start: var(--header-footer-padding-variation, clamp(10px, 0.0286rem + 2.5445vi, 20px));
+    inset-inline-end: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem));
+    inset-block-start: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem));
     position: absolute;
     inline-size: 25px;
     block-size: 25px;
@@ -46,9 +47,30 @@ display: flex;
   }
 }
 
+.header__decorative-element {
+  position: absolute;
+  display: flex;
+  inline-size: 61px;
+  block-size: 26px;
+  inset-block-start: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem));
+  inset-inline-end: var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem));
+  color:var(--accent-color, #FF0070);
+  font-size: 18px;
+  &:after {
+    content:"";
+    margin: auto;
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
+    background-color:currentColor;
+  }
+}
+
 .header__theme-menu {
   align-self: center;
   justify-self: end;
+  /* margin-top: -10px; */
 }
 
 .header__theme-menu-list {
@@ -59,10 +81,15 @@ display: flex;
 
 .header__theme-menu-button {
   background:transparent;
+  padding: 3px 13px;
+  font-size: inherit;
+  line-height: 100%;
   color:var(--accent-color, #FF0070);
   border: none;
   border-block-end: 1px solid transparent;
   cursor: pointer;
+  user-select: none;
+  text-transform: lowerCase;
   &:focus {
     outline:none;
   };
@@ -81,16 +108,13 @@ display: flex;
 
 
 .header__title, .footer__title {
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vi, 7.5rem);
   font-weight: 700;
   line-height: 83%;
   color:var(--header-footer-text-color,#DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-  @media (min-width: 375) {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  };
   @media (min-width: 768px) {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
   };
 }
 
@@ -117,36 +141,34 @@ display: flex;
 
 .content {
   display: grid;
-  gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
-  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem) 0;
+  gap: 50px;
+  padding: 0 var(--padding-variation, clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem)) 0;
 }
 
 .difficulties {
   display: grid;
   gap: 10px;
-  margin-block-start: clamp(-1.25rem, -0.0286rem - 2.5445vw, -0.625rem);
 }
 .heading {
   color: var(--accent-color, #FF0070);
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  margin-block-end: 10px;
 }
 .subheading {
   font-weight: 700;
   font-size: 18px;
-  line-height: 130%;
+  margin-block-start: 10px;
 }
 
 .description {
-  font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   color: var(--text-color, #F1B2CE);
 }
 
 .description a {
+  text-underline-offset: 4px;
   text-shadow: 1px 1px 0 var(--accent-color, #FF0070);
 }
 
@@ -161,7 +183,7 @@ display: flex;
 }
 
 .advice{
-  font-family:var(--main-font, sans-serif);
+  margin-block-start: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -172,5 +194,5 @@ display: flex;
   gap: 10px;
 }
 .footer {
-  margin-block-start: clamp(-1.25rem, -0.0286rem - 2.5445vw, -0.625rem);
+  
 }
