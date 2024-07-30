@@ -4,11 +4,13 @@
 */
 .page {
   --main-font:'IBM Plex mono';
-  --accent-color:#FF0070;
-  --hover-color:rgba(255, 0, 112, 0.4);
-  --header-footer-text-color:#DB00FF;
-  --subheading-text-color: #000028;
   --text-color: #F1B2CE;
+  --accent-color:#FF0070;
+  --header-footer-text-color:#DB00FF;
+  --header-footer-accent-color: #FF0070;
+  --title-text-color: #FF0070;
+  --subtitle-text-color: #000028;
+  --hover-color:#FF0070;
   --bg-color:#000028;
   --padding-variation: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
   --cover-image-url: url(../images/cover-image-dark.png);
