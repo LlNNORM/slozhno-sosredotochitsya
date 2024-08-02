@@ -100,21 +100,24 @@ display: flex;
   line-height: 100%;
   color:currentColor;
   border: none;
-  border-block-end: 1px solid transparent;
+  border: 1px solid transparent;
+  outline:1px solid transparent;
   cursor: pointer;
   user-select: none;
   text-transform: lowerCase;
+  transition:  border 0.3s ease-in-out, outline 0.3s ease-in-out;
   &:focus {
-    outline:none;
+    outline:transparent;
   };
 
   &:focus-visible {
     border-block-end: 1px solid currentColor;
   };
-
-  &:hover {
-    outline:1px solid rgb(from var(--hover-color) r g b / .4);
-  };
+  @media (hover: hover) {
+    &:hover {
+      outline:1px solid rgb(from var(--hover-color) r g b / .4);
+    }
+  }
 }
 
 .header__theme-menu-button_active {
@@ -210,9 +213,24 @@ display: flex;
   color: var(--text-color, #F1B2CE);
 }
 
-.description a {
-  text-underline-offset: 4px;
-  text-shadow: 1px 1px 0 var(--accent-color, #FF0070);
+.description .link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  border: 1px solid transparent;
+  outline:1px solid transparent;
+  transition: outline 0.3s ease-in-out, border 0.3s ease-in-out;
+  &:focus {
+    outline:transparent;
+  };
+
+  &:focus-visible {
+    outline:1px solid currentColor;
+  };
+  @media (hover: hover) {
+    &:hover {
+      border-block-end: 1px solid currentColor;
+    }
+  }
 }
 
 .factors {
@@ -234,8 +252,13 @@ display: flex;
     };
     @media (min-width: 1024px) {
       grid-column: auto;
-      grid-row: 2/3;
-      
+    };
+  }
+
+  .factors .heading {
+    @media (min-width: 1024px) {
+      inline-size: 32%;
+      grid-column: 1/4;
     };
   }
 
@@ -264,7 +287,11 @@ display: flex;
     min-block-size: 823px;
     gap: 20px;
     grid-template-columns: 1fr clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 1fr;
-    grid-template-rows: min-content 23.33% clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 38.64%;
+    grid-template-rows: min-content clamp(12rem, -0.75rem + 26.5625vw, 16.25rem) clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) clamp(19.875rem, -0.75rem + 42.9688vw, 26.75rem);
+  };
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr clamp(19.6875rem, -10.6202rem + 47.3558vw, 32rem) 1fr;
+    grid-template-rows: min-content clamp(16.25rem, -8.8269rem + 39.1827vw, 26.4375rem) clamp(19.6875rem, -10.6202rem + 47.3558vw, 32rem) clamp(26.75rem, -14.4808rem + 64.4231vw, 43.5rem);
   };
 }
 
@@ -304,10 +331,5 @@ display: flex;
     grid-row: 4/5;
     grid-column: 2/4;
   }
-}
-
-
-.footer {
-  
 }
 
