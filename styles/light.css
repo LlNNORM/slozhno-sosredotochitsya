@@ -36,6 +36,17 @@
     --hover-color:#353430;
     --bg-color:#FFF1F7;
     --cover-image-url: url(../images/cover-image-light.png);  
+    --cover-image-url-set: image-set(
+    url(../images/cover-image-light.avif) type("image/avif") 1x,
+    url(../images/cover-image-light-2x.avif) type("image/avif") 2x,
+    url(../images/cover-image-light-3x.avif) type("image/avif") 3x,
+    url(../images/cover-image-light.webp) type("image/webp") 1x,
+    url(../images/cover-image-light-2x.webp) type("image/webp") 2x,
+    url(../images/cover-image-light-3x.webp) type("image/webp") 3x,
+    url(../images/cover-image-light.png) type("image/png") 1x,
+    url(../images/cover-image-light-2x.png) type("image/png") 2x,
+    url(../images/cover-image-light-3x.png) type("image/png") 3x
+  );
     }
 
   .header__decorative-element{
