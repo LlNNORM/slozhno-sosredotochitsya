@@ -113,11 +113,66 @@
   
       <section class="images">
         <h3 class="subheading title-decor">А можно в картинках?</h3>
-        <img src="./images/sunset.png" alt="sunset" class="images__item">
-        <img src="./images/ice-cream.png" alt="ice-cream" class="images__item">
-        <img src="./images/tape.png" alt="tape" class="images__item">
-        <img src="./images/books.png" alt="books" class="images__item">
-        <img src="./images/street.png" alt="street" class="images__item">
+        <picture class="images__item">
+          <source 
+          srcset="./images/sunset.avif 1x, ./images/sunset-2x.avif 2x, ./images/sunset-3x.avif 3x"
+          type="image/avif"
+          />
+          <source 
+          srcset="./images/sunset.webp 1x, ./images/sunset-2x.webp 2x, ./images/sunset-3x.webp 3x"
+          type="image/webp"
+          />
+          <img loading="lazy" srcset="./images/sunset.png 1x, ./images/sunset-2x.png 2x, ./images/sunset-3x.png 3x" alt="sunset" >
+        </picture>
+
+        <picture class="images__item">
+          <source 
+          srcset="./images/ice-cream.avif 1x, ./images/ice-cream-2x.avif 2x, ./images/ice-cream-3x.avif 3x"
+          type="image/avif"
+          />
+          <source 
+          srcset="./images/ice-cream.webp 1x, ./images/ice-cream-2x.webp 2x, ./images/ice-cream-3x.webp 3x"
+          type="image/webp"
+          />
+          <img loading="lazy" srcset="./images/ice-cream.png 1x, ./images/ice-cream-2x.png 2x, ./images/ice-cream-3x.png 3x"  alt="ice-cream">
+        </picture>
+        
+        <picture class="images__item">
+          <source 
+          srcset="./images/tape.avif 1x, ./images/tape-2x.avif 2x, ./images/tape-3x.avif 3x"
+          type="image/avif"
+          />
+          <source 
+          srcset="./images/tape.webp 1x, ./images/tape-2x.webp 2x, ./images/tape-3x.webp 3x"
+          type="image/webp"
+          /> 
+          <img loading="lazy" srcset="./images/tape.png 1x, ./images/tape-2x.png 2x, ./images/tape-3x.png 3x" alt="tape">
+        </picture>
+
+        <picture class="images__item">
+          <source 
+          srcset="./images/books.avif 1x, ./images/books-2x.avif 2x, ./images/books-3x.avif 3x"
+          type="image/avif"
+          />
+          <source 
+          srcset="./images/books.webp 1x, ./images/books-2x.webp 2x, ./images/books-3x.webp 3x"
+          type="image/webp"
+          />
+          <img loading="lazy" srcset="./images/books.png 1x, ./images/books-2x.png 2x, ./images/books-3x.png 3x" alt="books">
+        </picture>
+
+        <picture class="images__item">
+          <source 
+          srcset="./images/street.avif 1x, ./images/street-2x.avif 2x, ./images/street-3x.avif 3x"
+          type="image/avif"
+          />
+          <source 
+          srcset="./images/street.webp 1x, ./images/street-2x.webp 2x, ./images/street-3x.webp 3x"
+          type="image/webp"
+          />
+          <img loading="lazy" srcset="./images/street.png 1x, ./images/street-2x.png 2x, ./images/street-3x.png 3x" alt="street">
+        </picture>
+        
       </section>
     </main>
     

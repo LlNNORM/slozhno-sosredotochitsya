@@ -14,4 +14,15 @@
   --bg-color:#000028;
   --padding-variation: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
   --cover-image-url: url(../images/cover-image-dark.png);
+  --cover-image-url-set: image-set(
+    url(../images/cover-image-dark.avif) type("image/avif") 1x,
+    url(../images/cover-image-dark-2x.avif) type("image/avif") 2x,
+    url(../images/cover-image-dark-3x.avif) type("image/avif") 3x,
+    url(../images/cover-image-dark.webp) type("image/webp") 1x,
+    url(../images/cover-image-dark-2x.webp) type("image/webp") 2x,
+    url(../images/cover-image-dark-3x.webp) type("image/webp") 3x,
+    url(../images/cover-image-dark.png) type("image/png") 1x,
+    url(../images/cover-image-dark-2x.png) type("image/png") 2x,
+    url(../images/cover-image-dark-3x.png) type("image/png") 3x
+  );
 }

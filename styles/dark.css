@@ -9,6 +9,17 @@
   --hover-color:#FF0070;
   --bg-color:#000028;
   --cover-image-url: url(../images/cover-image-dark.png);
+  --cover-image-url-set: image-set(
+    url(../images/cover-image-dark.avif) type("image/avif") 1x,
+    url(../images/cover-image-dark-2x.avif) type("image/avif") 2x,
+    url(../images/cover-image-dark-3x.avif) type("image/avif") 3x,
+    url(../images/cover-image-dark.webp) type("image/webp") 1x,
+    url(../images/cover-image-dark-2x.webp) type("image/webp") 2x,
+    url(../images/cover-image-dark-3x.webp) type("image/webp") 3x,
+    url(../images/cover-image-dark.png) type("image/png") 1x,
+    url(../images/cover-image-dark-2x.png) type("image/png") 2x,
+    url(../images/cover-image-dark-3x.png) type("image/png") 3x
+  );
 }
 
 .theme_dark .header__decorative-element{

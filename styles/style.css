@@ -22,6 +22,7 @@
 .header {
   display: grid;
   background: var(--cover-image-url) center center / cover no-repeat;
+  background: var(--cover-image-url-set) center center / cover no-repeat;
   background-attachment: fixed;
   grid-template-rows: 1fr min-content 1fr;
   
@@ -283,19 +284,16 @@ display: flex;
 .images {
   display: grid;
   gap: 10px;
+  overflow: hidden;
   @media (min-width: 768px) {
     min-block-size: 823px;
     gap: 20px;
-    grid-template-columns: 1fr clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 1fr;
-    grid-template-rows: min-content clamp(12rem, -0.75rem + 26.5625vw, 16.25rem) clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) clamp(19.875rem, -0.75rem + 42.9688vw, 26.75rem);
-  };
-  @media (min-width: 1024px) {
-    grid-template-columns: 1fr clamp(19.6875rem, -10.6202rem + 47.3558vw, 32rem) 1fr;
-    grid-template-rows: min-content clamp(16.25rem, -8.8269rem + 39.1827vw, 26.4375rem) clamp(19.6875rem, -10.6202rem + 47.3558vw, 32rem) clamp(26.75rem, -14.4808rem + 64.4231vw, 43.5rem);
+    grid-template-columns: 1fr 1fr 1fr;
   };
 }
 
-.images__item {
+.images__item img{
+  display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -308,28 +306,50 @@ display: flex;
   }
 
   .images__item:nth-of-type(1) {
+    aspect-ratio: 479/192;
     grid-row: 2/3;
     grid-column: 1/3;
   }
   
   .images__item:nth-of-type(2) {
+    aspect-ratio: 229/441;
     grid-row: 2/4;
     grid-column: 3/4;
   }
   
   .images__item:nth-of-type(3) {
+    aspect-ratio: 229/568;
     grid-row: 3/5;
     grid-column: 1/2;
   }
   
   .images__item:nth-of-type(4) {
+    aspect-ratio: 1;
     grid-row: 3/4;
     grid-column: 2/3;
   }
   
   .images__item:nth-of-type(5) {
+    aspect-ratio: 479/318;
     grid-row: 4/5;
     grid-column: 2/4;
   }
 }
 
+@media (min-width: 1024px) {
+  .images__item:nth-of-type(1) {
+    aspect-ratio: 649/260;
+  }
+  
+  .images__item:nth-of-type(2) {
+    aspect-ratio: 9/17;
+  }
+  
+  .images__item:nth-of-type(3) {
+    aspect-ratio: 105/256;
+  }
+  
+  .images__item:nth-of-type(5) {
+    aspect-ratio: 649/428;
+  }
+}
