@@ -1,10 +1,14 @@
 .page {
   display: grid;
+  background: var(--cover-image-url-set) top / 100% 100vh no-repeat,
+    var(--cover-image-url) top / 100% 100vh no-repeat,
+    linear-gradient(var(--bg-color, #000028), var(--bg-color, #000028));
+  background-attachment: fixed;
   font-family: var(--main-font, sans-serif);
-  background: var(--bg-color, #000028);
   gap: clamp(2.5rem, 1.3073rem + 5.0891vi, 3.75rem);
   font-size: 18px;
 }
+
 .header,
 .footer {
   min-block-size: 668px;
@@ -24,9 +28,6 @@
 
 .header {
   display: grid;
-  background: var(--cover-image-url) center center / cover no-repeat;
-  background: var(--cover-image-url-set) center center / cover no-repeat;
-  background-attachment: fixed;
   grid-template-rows: 1fr min-content 1fr;
 }
 
