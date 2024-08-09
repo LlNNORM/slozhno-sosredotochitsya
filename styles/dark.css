@@ -1,13 +1,12 @@
-
 .page.theme_dark {
-  --text-color: #F1B2CE;
-  --accent-color:#FF0070;
-  --header-footer-text-color:#DB00FF;
-  --header-footer-accent-color: #FF0070;
-  --title-text-color: #FF0070;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --header-footer-text-color: #db00ff;
+  --header-footer-accent-color: #ff0070;
+  --title-text-color: #ff0070;
   --subtitle-text-color: #000028;
-  --hover-color:#FF0070;
-  --bg-color:#000028;
+  --hover-color: #ff0070;
+  --bg-color: #000028;
   --cover-image-url: url(../images/cover-image-dark.png);
   --cover-image-url-set: image-set(
     url(../images/cover-image-dark.avif) type("image/avif") 1x,
@@ -22,6 +21,6 @@
   );
 }
 
-.theme_dark .header__decorative-element{
+.theme_dark .header__decorative-element {
   display: flex;
 }

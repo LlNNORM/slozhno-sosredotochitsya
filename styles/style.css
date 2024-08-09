@@ -1,10 +1,5 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   display: grid;
-  background-attachment: fixed;
-  background: var(--cover-image-url) center center / cover no-repeat;
-  background: var(--cover-image-url-set) center center / cover no-repeat;
   font-family: var(--main-font, sans-serif);
   background: var(--bg-color, #000028);
   gap: clamp(2.5rem, 1.3073rem + 5.0891vi, 3.75rem);
@@ -29,7 +24,9 @@
 
 .header {
   display: grid;
- 
+  background: var(--cover-image-url) center center / cover no-repeat;
+  background: var(--cover-image-url-set) center center / cover no-repeat;
+  background-attachment: fixed;
   grid-template-rows: 1fr min-content 1fr;
 }
 
@@ -124,7 +121,6 @@
   font-size: inherit;
   line-height: 100%;
   color: currentColor;
-  border: none;
   border: 1px solid transparent;
   outline: 1px solid transparent;
   cursor: pointer;
@@ -158,13 +154,13 @@
   color: var(--header-footer-text-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   @media (min-width: 768px) {
-    position: relative;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vi, 9.8125rem);
   }
 }
 
 .header__title {
   @media (min-width: 768px) {
+    position: relative;
     inset-inline-end: 20px;
   }
 }
@@ -309,9 +305,7 @@
 .images {
   display: grid;
   gap: 10px;
-  overflow: hidden;
   @media (min-width: 768px) {
-    min-block-size: 823px;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
   }

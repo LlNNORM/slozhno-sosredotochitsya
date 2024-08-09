@@ -1,0 +1,4 @@
+# SLOZHNO-SOSREDOTOCHITSYA LANDING
+
+### MY THIRD PROJECT AT YANDEX PRACTICUM:
+### https://github.com/LlNNORM/slozhno-sosredotochitsya

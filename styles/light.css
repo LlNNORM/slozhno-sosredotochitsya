@@ -1,12 +1,12 @@
 .page.theme_light {
-  --text-color:#353430;
-  --accent-color:#ff8dcb;
-  --header-footer-text-color:#ffc2e6;
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --header-footer-text-color: #ffc2e6;
   --header-footer-accent-color: #353430;
   --title-text-color: #353430;
   --subtitle-text-color: #353430;
-  --hover-color:#353430;
-  --bg-color:#FFF1F7;
+  --hover-color: #353430;
+  --bg-color: #fff1f7;
   --cover-image-url: url(../images/cover-image-light.png);
   --cover-image-url-set: image-set(
     url(../images/cover-image-light.avif) type("image/avif") 1x,
@@ -21,35 +21,35 @@
   );
 }
 
-.theme_light .header__decorative-element{
+.theme_light .header__decorative-element {
   display: none;
 }
 
 @media (prefers-color-scheme: light) {
   .page {
-    --text-color:#353430;
-    --accent-color:#ff8dcb;
-    --header-footer-text-color:#ffc2e6;
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --header-footer-text-color: #ffc2e6;
     --header-footer-accent-color: #353430;
     --title-text-color: #353430;
     --subtitle-text-color: #353430;
-    --hover-color:#353430;
-    --bg-color:#FFF1F7;
-    --cover-image-url: url(../images/cover-image-light.png);  
+    --hover-color: #353430;
+    --bg-color: #fff1f7;
+    --cover-image-url: url(../images/cover-image-light.png);
     --cover-image-url-set: image-set(
-    url(../images/cover-image-light.avif) type("image/avif") 1x,
-    url(../images/cover-image-light-2x.avif) type("image/avif") 2x,
-    url(../images/cover-image-light-3x.avif) type("image/avif") 3x,
-    url(../images/cover-image-light.webp) type("image/webp") 1x,
-    url(../images/cover-image-light-2x.webp) type("image/webp") 2x,
-    url(../images/cover-image-light-3x.webp) type("image/webp") 3x,
-    url(../images/cover-image-light.png) type("image/png") 1x,
-    url(../images/cover-image-light-2x.png) type("image/png") 2x,
-    url(../images/cover-image-light-3x.png) type("image/png") 3x
-  );
-    }
+      url(../images/cover-image-light.avif) type("image/avif") 1x,
+      url(../images/cover-image-light-2x.avif) type("image/avif") 2x,
+      url(../images/cover-image-light-3x.avif) type("image/avif") 3x,
+      url(../images/cover-image-light.webp) type("image/webp") 1x,
+      url(../images/cover-image-light-2x.webp) type("image/webp") 2x,
+      url(../images/cover-image-light-3x.webp) type("image/webp") 3x,
+      url(../images/cover-image-light.png) type("image/png") 1x,
+      url(../images/cover-image-light-2x.png) type("image/png") 2x,
+      url(../images/cover-image-light-3x.png) type("image/png") 3x
+    );
+  }
 
-  .header__decorative-element{
+  .header__decorative-element {
     display: none;
   }
 }
