@@ -257,7 +257,7 @@
   }
 }
 
-.horizontal-layout {
+.distractions {
   align-items: start;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
